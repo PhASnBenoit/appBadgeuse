@@ -31,7 +31,8 @@ SOURCES += \
     cgpio.cpp \
     CMFRC522.cpp \
     cspi.cpp \
-    cbdd.cpp
+    cbdd.cpp \
+    csettings.cpp
 
 HEADERS += \
         cgui.h \
@@ -40,7 +41,8 @@ HEADERS += \
     CMFRC522.h \
     cspi.h \
     bcm2835.h \
-    cbdd.h
+    cbdd.h \
+    csettings.h
 
 FORMS += \
         cgui.ui

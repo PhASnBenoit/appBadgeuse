@@ -6,7 +6,7 @@ CGui::CGui(QWidget *parent) :
     ui(new Ui::CGui)
 {
     ui->setupUi(this);
-    _tmr.setInterval(1000);
+    _tmr.setInterval(500);
     connect(&_tmr, &QTimer::timeout, this, &CGui::on_timeout);
     on_afficher("ACTIVATION de la détection RFID...");
     _tmr.start();

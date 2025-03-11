@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Badgeuse 2025-07-03 by PhA</string>
+   <string>Badgeuse 2025-03-11 by PhA</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTextEdit" name="textEdit">

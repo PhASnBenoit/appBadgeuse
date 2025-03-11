@@ -8,6 +8,7 @@
 #include "cbdd.h"
 #include "cgpio.h"
 #include "CMFRC522.h"
+#include "csettings.h"
 
 class CApp : public QObject
 {

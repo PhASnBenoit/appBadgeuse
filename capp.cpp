@@ -14,8 +14,9 @@ CApp::CApp(QObject *parent) : QObject(parent)
     _gui->show();
     connect(_gui, &CGui::sig_isCard, this, &CApp::on_isCard);
     connect(this, &CApp::sig_afficher, _gui, &CGui::on_afficher);
-    if (!_bdd.open("192.168.1.44", "badgeur", "badgeur", "bdd_badgeuse"))
-        emit sig_afficher("Problème d'accès à la BDD, voir paramètres ligne 17 de capp.cpp");
+    CSettings settings;
+    if (!_bdd.open(settings.getBddHostName(), settings.getLogin(), settings.getPassword(), settings.getBddName()))
+        emit sig_afficher("Problème d'accès à la BDD, voir paramètres dans fichier /opt/appBadgeuse/appBadgeuse.ini !");
     else
         emit sig_afficher("Accès à la BDD valide");
     // au démarrage seulement
